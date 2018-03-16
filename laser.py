@@ -10,11 +10,14 @@ def getAveLight():
         aveVolts = aveVolts + explorerhat.analog.four.read()
         time.sleep(0.1)
     return aveVolts/10
-print("Average light is at %f" % getAveLight())
+
+firstLight =  getAveLight()   
+print("Average light is at %f" firstLight)
 
 while True:
-    Voltage1  = explorerhat.analog.four.read()
-    print('Voltage is %f' % Voltage1)
+    newLight  = explorerhat.analog.four.read()
+    if newLight > firstLight*1.2:
+        print("Ping")
     # if V2 > threshold:
     #     explorerhat.output.one.off()
     #     explorerhat.output.two.on()
