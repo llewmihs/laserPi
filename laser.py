@@ -17,11 +17,14 @@ print("Average light is at %f" % firstLight)
 while True:
     newLight  = explorerhat.analog.four.read()
     if newLight > firstLight*1.5:
+        millis = int(round(time.time()*1000))
         print("Ping")
         time.sleep(0.5)
         while True:
             newLight  = explorerhat.analog.four.read()
             if newLight > firstLight*1.5:
                 print("Pong")
+                sailTime = int(round(time.time()*1000)) - millis
+                print("Time: %d" % sailTime)
                 time.sleep(0.5)
                 break      
