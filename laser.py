@@ -16,12 +16,12 @@ print("Average light is at %f" % firstLight)
 
 while True:
     newLight  = explorerhat.analog.four.read()
-    if newLight > firstLight*1.1:
+    if newLight > firstLight*1.5:
         print("Ping")
         time.sleep(0.5)
         while True:
             newLight  = explorerhat.analog.four.read()
-            if newLight > firstLight*1.1:
+            if newLight > firstLight*1.5:
                 print("Pong")
                 time.sleep(0.5)
                 break      
