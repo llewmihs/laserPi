@@ -25,4 +25,3 @@ while True:
                 print("Pong")
                 time.sleep(0.5)
                 break      
-    time.sleep(delay)
