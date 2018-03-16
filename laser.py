@@ -18,10 +18,10 @@ while True:
     newLight  = explorerhat.analog.four.read()
     if newLight > firstLight*1.2:
         print("Ping")
-    # if V2 > threshold:
-    #     explorerhat.output.one.off()
-    #     explorerhat.output.two.on()
-    # else:
-    #     explorerhat.output.one.on()
-    #     explorerhat.output.two.off()        
+        time.sleep(0.1)
+        while True:
+            newLight  = explorerhat.analog.four.read()
+            if newLight > firstLight*1.2:
+                print("Pong")
+                False      
     time.sleep(delay)
