@@ -23,5 +23,5 @@ while True:
             newLight  = explorerhat.analog.four.read()
             if newLight > firstLight*1.2:
                 print("Pong")
-                False      
+                break      
     time.sleep(delay)
