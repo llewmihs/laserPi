@@ -7,7 +7,6 @@
 import RPi.GPIO as GPIO, time, os
 from gpiozero import LED
 
-laser = LED(14)
 DEBUG = 1
 GPIO.setmode(GPIO.BCM)
 
