@@ -25,6 +25,6 @@ while True:
             if newLight > firstLight*1.5:
                 print("Pong")
                 sailTime = int(round(time.time()*1000)) - millis
-                print("Time: %d" % sailTime)
+                print("Time: %f" % sailTime/1000)
                 time.sleep(0.5)
                 break      
