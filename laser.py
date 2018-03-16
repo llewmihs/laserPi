@@ -18,7 +18,7 @@ while True:
     newLight  = explorerhat.analog.four.read()
     if newLight > firstLight*1.2:
         print("Ping")
-        time.sleep(0.1)
+        time.sleep(0.5)
         while True:
             newLight  = explorerhat.analog.four.read()
             if newLight > firstLight*1.2:
