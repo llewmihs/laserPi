@@ -12,7 +12,7 @@ def getAveLight():
     return aveVolts/10
 
 firstLight =  getAveLight()   
-print("Average light is at %f" firstLight)
+print("Average light is at %f" % firstLight)
 
 while True:
     newLight  = explorerhat.analog.four.read()
