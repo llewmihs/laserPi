@@ -8,7 +8,7 @@ threshold = 2.5
 delay = 0.25
 
 while True:
-    V2  = explorerhat.analog.one.read()
+    V2  = explorerhat.analog.four.read()
     V1 = V - V2
     R2 = V2*(R1/V1)
     print('  {0:5.2f} volts   {1:5.2f} ohms'.format(round(V2,2), round(R2,2)))
